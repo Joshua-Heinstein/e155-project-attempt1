@@ -16,7 +16,8 @@
 // Button pins
 #define Previous_Key  PA8
 #define Pause_Key     PA6
-#define Next_Key      PA5
+#define Next_Key      PB7
+
 
 // State variables
 static int isPaused = 0;

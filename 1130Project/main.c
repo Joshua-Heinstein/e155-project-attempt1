@@ -6,7 +6,7 @@
  * 
  * Hardware Connections:
  * - UART2 (DFPlayer): PA9 (TX) -> DFPlayer RX, PA10 (RX) -> DFPlayer TX
- * - Buttons: PA5 (Previous), PA6 (Pause/Play), PA8 (Next)
+ * - Buttons: PA8 (Previous), PA6 (Pause/Play), PB7 (Next)
  * - DFPlayer: VCC (3.3V), GND, SPK+ and SPK- to speaker
  * 
  * Usage:
@@ -37,7 +37,7 @@ int main(void) {
     USART_TypeDef * USART = initUSART(USART1_ID, 9600);
 
     // Initialize DFPlayer with volume 20 (range: 0-30)
-    DF_Init(USART, 20);
+    DF_Init(USART, 10);
 
     // Small delay to ensure initialization
     delay_millis(TIM15, 100);
