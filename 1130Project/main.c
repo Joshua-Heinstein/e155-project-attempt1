@@ -37,7 +37,7 @@ int main(void) {
     USART_TypeDef * USART = initUSART(USART1_ID, 9600);
 
     // Initialize DFPlayer with volume 20 (range: 0-30)
-    DF_Init(USART, 10);
+    DF_Init(USART, 25);
 
     // Small delay to ensure initialization
     delay_millis(TIM15, 100);
