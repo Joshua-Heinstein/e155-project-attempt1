@@ -1,0 +1,12 @@
+---
+title: "Schematics and Block Diagram"
+---
+
+## Block Diagram
+The block diagram for this project shows the MCU communicating with the DFPlayer Mini over UART on pins PA9 (TX) and PA10 (RX). As an analog signal leaves the DFPlayer to drive the speaker, it is read by pin PA5 on the MCU. The MCU reads it using its ADC, and runs an FFT on the signal, producing a square wave composed of the 5 most dominant frequencies. The FPGA reads this on PIN NUMBER####################, and outputs PWM waves to 12 LEDs with a duty cycle related to how prevalent the corresponding LED's frequency is in a 2 second window. 
+
+## Schematic
+
+Three push buttons are connected to the MCU that trigger the MCU to send commands for previous song (PA8), play/pause (PA6), and next song (PB7).
+
+The DFPlayer requires a separate 5V power source to supply enough power to the speaker.   
